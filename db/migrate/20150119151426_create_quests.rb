@@ -5,7 +5,7 @@ class CreateQuests < ActiveRecord::Migration
       t.text :description
       t.decimal :points
       t.integer :user_id
-
+      t.string :category
       t.timestamps
     end
   end
