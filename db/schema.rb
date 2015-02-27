@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(version: 20150226060858) do
 # Could not dump table "quests" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
+  add_index "quest_categories", ["category_id"], name: "index_quest_categories_on_category_id"
+  add_index "quest_categories", ["quest_id"], name: "index_quest_categories_on_quest_id"
+
+  create_table "quests", force: true do |t|
+  t.string "title"
+  t.string "teaser"
+  t.text "description"
+  t.text "url"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "resource_id"
