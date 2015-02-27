@@ -67,7 +67,8 @@ Quest.create(:title => ' Dry Mouth',
 Quest.create(:title => ' In love with your professor ',
                :description => %{ Ask your professor: „In what bar did you went last night? You look like it was a good night!. },
                :points => 150,
-               #:category => Category.find(0))
+               #:category => Category.find(0)
+               )
 
 User.delete_all
 pass = "pass1234"
