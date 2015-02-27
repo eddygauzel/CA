@@ -17,13 +17,13 @@ Quest.delete_all
 Quest.create(:title => 'Marathon',
                :description => %{Run 42 km},
                :points => 300,
-               :category => Category.find(1)
+               :Category => Category.find(1)
 )
 # . . .
 Quest.create(:title => 'Zimmer aufräumen',
                :description => %{Alle Socken vom Boden aufheben},
                :points => 20,
-               :category => Category.find(0)
+               :Category => Category.find(0)
 )
 # . . .
 
@@ -31,7 +31,7 @@ Quest.create(:title => 'Nackte Meile',
                :description => %{Laufe um Mitternacht einmal um den Campus, nackt!},
                :points => 150,
                :user_id => 9,
-               :category => Category.find(1)
+               :Category => Category.find(1)
 )
 
 User.delete_all
